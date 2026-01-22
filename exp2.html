@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        /* 1. Global Styles: Centering the form on the page */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* 2. Main Container: The white box effect */
+        main {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a73e8; /* Professional blue color */
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        /* 3. Form Grouping: Spacing between labels and inputs */
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        /* 4. Input Styling: Making the boxes look modern */
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #e1e4e8;
+            border-radius: 8px;
+            box-sizing: border-box; /* Crucial: Keeps padding inside the width */
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        /* Changes border color when you click inside the box */
+        input:focus {
+            outline: none;
+            border-color: #1a73e8;
+        }
+
+        /* 5. Submit Button Styling */
+        input[type="submit"] {
+            width: 100%;
+            background-color: #1a73e8;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        /* Hover and Click Effects */
+        input[type="submit"]:hover {
+            background-color: #1557b0;
+        }
+
+        input[type="submit"]:active {
+            transform: scale(0.98); /* Slight "press" effect */
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <h1>Registration</h1>
+
+    <form>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required pattern="[A-Za-z ]{3,}">
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="example@college.com" required>
+
+        <label for="age">Age (18 - 60)</label>
+        <input type="number" id="age" name="age" min="18" max="60" required>
+
+        <input type="submit" value="Register Now">
+    </form>
+</main>
+
+</body>
+</html>
